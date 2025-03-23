@@ -1,0 +1,19 @@
+@if (user) {
+    <div>
+    <b>id: </b><span>{{user.id}}</span>
+    </div>
+    <div>
+    <b>User Name: </b><span>{{user.userName}}</span>
+    </div>
+    <div>
+    <b>Email: </b><span>{{user.eMail}}</span>
+    </div>
+    <div>
+    <b>Created At: </b><span>{{user.createdAt}}</span>
+    </div>
+    ...
+    ...
+    }
+    @else {
+    <p>No user info to display</p>
+    }

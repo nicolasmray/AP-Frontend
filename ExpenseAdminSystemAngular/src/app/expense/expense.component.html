@@ -1,0 +1,29 @@
+@if (expense) {
+    <div>
+        <b>Id: </b><span>{{expense.id}}</span>
+    </div>
+    <div>
+        <b>User Id: </b><span>{{expense.user_id}}</span>
+    </div>
+    <div>
+        <b>Amount: </b><span>{{expense.amount}}</span>
+    </div>
+    <div>
+        <b>Expense Date: </b><span>{{expense.expenseDate}}</span>
+    </div>
+    <div>
+        <b>Category Id: </b><span>{{expense.category_id}}</span>
+    </div>
+    <div>
+        <b>Currency Id: </b><span>{{expense.currency_id}}</span>
+    </div>
+    <div>
+        <b>Comments: </b><span>{{expense.comments}}</span>
+    </div>
+    <div>
+    <b>Created At: </b><span>{{expense.createdAt}}</span>
+    </div>
+    }
+    @else {
+    <p>No expense info to display</p>
+    }
