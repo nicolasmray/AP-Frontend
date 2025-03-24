@@ -3,7 +3,7 @@
         <b>Id: </b><span>{{expense.id}}</span>
     </div>
     <div>
-        <b>User Id: </b><span>{{expense.user_id}}</span>
+        <b>User Id: </b><span>{{expense.userId}}</span>
     </div>
     <div>
         <b>Amount: </b><span>{{expense.amount}}</span>
@@ -12,10 +12,10 @@
         <b>Expense Date: </b><span>{{expense.expenseDate}}</span>
     </div>
     <div>
-        <b>Category Id: </b><span>{{expense.category_id}}</span>
+        <b>Category Id: </b><span>{{expense.categoryId}}</span>
     </div>
     <div>
-        <b>Currency Id: </b><span>{{expense.currency_id}}</span>
+        <b>Currency Id: </b><span>{{expense.currencyId}}</span>
     </div>
     <div>
         <b>Comments: </b><span>{{expense.comments}}</span>
@@ -23,6 +23,8 @@
     <div>
     <b>Created At: </b><span>{{expense.createdAt}}</span>
     </div>
+    ...
+    ...
     }
     @else {
     <p>No expense info to display</p>

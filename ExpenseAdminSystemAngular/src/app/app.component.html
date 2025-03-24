@@ -7,20 +7,42 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<main>
+<!-- <main>
   <div>
     <p>Frontend working properly!</p>
-    <!-- <app-user></app-user> -->
+     <app-user></app-user> 
     <app-user-list></app-user-list>
     <app-expense-list></app-expense-list>
     <app-currency-list></app-currency-list>
     <app-category-list></app-category-list>
-
   </div>
+</main> -->
 
 
+<header>
+  <h1>Expense Tracker</h1>
+</header>
 
+<nav>
+  <a routerLink="/" routerLinkActive="active">Home</a>
+  <a routerLink="/expenses" routerLinkActive="active">Expenses</a>
+  <a routerLink="/categories" routerLinkActive="active">Categories</a>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+  <app-user-list></app-user-list>
+  <app-expense-list></app-expense-list>
+  <app-currency-list></app-currency-list>
+  <app-category-list></app-category-list>
 </main>
+
+<footer>
+  <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
+</footer>
+
+
+
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
