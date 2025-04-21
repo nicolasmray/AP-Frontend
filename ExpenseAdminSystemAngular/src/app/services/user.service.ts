@@ -8,13 +8,27 @@ import { User } from '../model/user';
 })
 export class UserService {
   baseUrl: string = "http://localhost:5038/api";
+  //authHeader: string = "Basic am9objpzZWNyZXQ=";
+
+  get authHeader(): string {
+    return localStorage["headerValue"]; //"Basic am9objpzZWNyZXQ=";
+  }    
+
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.baseUrl}/user`);
+    return this.http.get<User[]>(`${this.baseUrl}/user`, {
+      headers: {
+        "Authorization": this.authHeader
+      } 
+    });
   }
   getUser(id: number): Observable<User> {
-    return this.http.get<User>(`${this.baseUrl}/user/${id}`);
+    return this.http.get<User>(`${this.baseUrl}/user/${id}`, {
+      headers: {
+        "Authorization": this.authHeader
+     }
+    });
   }
   createUser(user: User): Observable<any> {
     return this.http.post(`${this.baseUrl}/user`, user);
