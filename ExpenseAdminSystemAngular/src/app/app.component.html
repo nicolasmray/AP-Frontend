@@ -1,16 +1,7 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <!-- <main>
   <div>
     <p>Frontend working properly!</p>
-     <app-user></app-user> 
+     <app-user></app-user>
     <app-user-list></app-user-list>
     <app-expense-list></app-expense-list>
     <app-currency-list></app-currency-list>
@@ -19,15 +10,57 @@
 </main> -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <header>
   <h1>Expense Tracker</h1>
 </header>
+
 
 <nav>
   <a routerLink="/" routerLinkActive="active">Home</a>
   <a routerLink="/expenses" routerLinkActive="active">Expenses</a>
   <a routerLink="/categories" routerLinkActive="active">Categories</a>
 </nav>
+
 
 <main>
   <router-outlet></router-outlet>
@@ -37,6 +70,45 @@
   <app-category-list></app-category-list>
 </main>
 
+
+<footer>
+  <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
+</footer>
+
+
+-->
+
+
+
+
+<!-- app.component.html -->
+<header>
+  <h1>Expense Tracker</h1>
+</header>
+
+
+<nav *ngIf="isAuthenticated">
+  <button routerLink="/" routerLinkActive="active">Home</button>
+  <button routerLink="/expenses" routerLinkActive="active">Expenses</button>
+  <button routerLink="/addExpense" routerLinkActive="active">Add Expense</button>
+  <button class="logout-button" (click)="logout()">Log Out</button>
+</nav>
+
+
+<main>
+  <router-outlet></router-outlet>
+ 
+  <!--
+  <app-user-list></app-user-list>
+  <app-expense-list></app-expense-list>
+  <app-currency-list></app-currency-list>
+  <app-category-list></app-category-list>
+  -->
+
+
+</main>
+
+
 <footer>
   <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
 </footer>
@@ -45,13 +117,18 @@
 
 
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+
+
+
+
+
+
 
 
 <router-outlet />
+
+
+

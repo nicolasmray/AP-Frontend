@@ -8,14 +8,34 @@ import { UserListComponent } from './user-list/user-list.component';
 import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { CurrencyListComponent } from './currency-list/currency-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, UserListComponent, ExpenseComponent, ExpenseListComponent, CurrencyComponent, CurrencyListComponent, CategoryComponent, CategoryListComponent],
+  imports: [RouterOutlet, CommonModule, UserComponent, UserListComponent, ExpenseComponent, ExpenseListComponent, CurrencyComponent, CurrencyListComponent, CategoryComponent, CategoryListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ExpenseAdminSystemAngular';
+  isAuthenticated: boolean = false;
+
+
+  ngOnInit() {
+    // Check localStorage at the start
+    this.isAuthenticated = !!localStorage.getItem('headerValue');
+    // The '!!' turns it into true/false directly
+  }
+
+
+
+
+
+  logout() {
+    localStorage.clear();
+    location.reload();
+  }
+
+
 }
