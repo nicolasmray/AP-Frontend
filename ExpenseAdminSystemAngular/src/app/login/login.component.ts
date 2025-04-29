@@ -27,7 +27,7 @@ export class LoginComponent {
           localStorage.setItem('username', auth.username);
           localStorage.setItem('id', auth.id);
 
-          this.router.navigate(['user-list'])
+          this.router.navigate(['home'])
         }
       })
     }
