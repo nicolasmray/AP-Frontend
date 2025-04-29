@@ -24,6 +24,9 @@ export class LoginComponent {
       this.auth.authenticate(this.username, this.password).subscribe( (auth) => {
         if(auth != null) {
           localStorage.setItem('headerValue', auth.headerValue);
+          localStorage.setItem('username', auth.username);
+          localStorage.setItem('id', auth.id);
+
           this.router.navigate(['user-list'])
         }
       })
