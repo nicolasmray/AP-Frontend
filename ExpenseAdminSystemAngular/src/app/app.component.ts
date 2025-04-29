@@ -9,11 +9,12 @@ import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { CurrencyListComponent } from './currency-list/currency-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, UserComponent, UserListComponent, ExpenseComponent, ExpenseListComponent, CurrencyComponent, CurrencyListComponent, CategoryComponent, CategoryListComponent],
+  imports: [RouterOutlet, CommonModule, HomeComponent, UserComponent, UserListComponent, ExpenseComponent, ExpenseListComponent, CurrencyComponent, CurrencyListComponent, CategoryComponent, CategoryListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -27,10 +28,6 @@ export class AppComponent {
     this.isAuthenticated = !!localStorage.getItem('headerValue');
     // The '!!' turns it into true/false directly
   }
-
-
-
-
 
   logout() {
     localStorage.clear();
