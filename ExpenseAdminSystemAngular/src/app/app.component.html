@@ -88,9 +88,14 @@
 
 
 <nav *ngIf="isAuthenticated">
-  <button routerLink="/" routerLinkActive="active">Home</button>
-  <button routerLink="/expenses" routerLinkActive="active">Expenses</button>
-  <button routerLink="/addExpense" routerLinkActive="active">Add Expense</button>
+  <!-- <button routerLink="/home" routerLinkActive="active">Home</button> -->
+
+ 
+  <button (click)="redirectHome()">Home</button>
+ 
+
+  <button (click)="redirectExpenses()">Expenses</button>
+  <button (click)="redirectAccount()">Account</button>
   <button class="logout-button" (click)="logout()">Log Out</button>
 </nav>
 
