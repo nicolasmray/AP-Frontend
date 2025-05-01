@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { ExpenseComponent } from './expense/expense.component';
 import { CurrencyComponent } from './currency/currency.component';
@@ -22,16 +22,29 @@ export class AppComponent {
   title = 'ExpenseAdminSystemAngular';
   isAuthenticated: boolean = false;
 
-
+  constructor(private router: Router) {}
+  
   ngOnInit() {
     // Check localStorage at the start
     this.isAuthenticated = !!localStorage.getItem('headerValue');
     // The '!!' turns it into true/false directly
   }
 
+
+  redirectHome() {
+    this.router.navigate(['home'])
+  }
+
+  redirectExpenses() {
+    this.router.navigate(['expenses'])
+  }
+  redirectAccount() {
+    this.router.navigate(['account'])
+  }
   logout() {
     localStorage.clear();
-    location.reload();
+    //location.reload();
+    this.router.navigate(['home'])
   }
 
 
