@@ -1,4 +1,4 @@
-@if (user) {
+<!-- @if (user) {
     <form #accountForm="ngForm"> 
 
 
@@ -52,7 +52,6 @@
                 </div>
 
                 <div>
-               <!-- Confirm Password Field -->
                 Confirm Password: 
                <input
                type="password"
@@ -65,6 +64,68 @@
                <span>Passwords do not match</span>
              }
 
+                </div>
+
+            <div class="user-info-row">
+                <b>Created At:</b> <span>{{ user.createdAt }}</span>
+            </div>
+            <div class="button-group">
+                <button class="btn-primary" type="button" (click)="saveChanges()">Save Changes</button>
+            </div>
+   
+    </form>
+  } @else {
+    <p>No user info to display</p>
+  }
+  
+ -->
+
+ @if (user) {
+    <form #accountForm="ngForm"> 
+
+
+   
+                <div class="user-info-row">
+                    <b>Id:</b> <span>{{ user.id }}</span>
+                </div>
+
+                <div>
+                    User Name: 
+                    <input type="text" [(ngModel)]="user.userName" name="username" required #username="ngModel">
+                    @if (username.invalid) {
+                        <span>Username is required</span>
+                    }
+                </div>
+                <div>
+                    email: 
+                    <input
+                    type="text"
+                    [(ngModel)]="user.email"
+                    name="email"
+                    required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    #email="ngModel"
+                  />
+                  
+                  @if (email.invalid && email.touched) {
+                    <span *ngIf="email.errors?.required">Email is required</span>
+                    <span *ngIf="email.errors?.pattern">Invalid email format</span>
+                  }
+                </div>
+                <div>
+                    Password: 
+                    <input
+                    type="string"
+                    [(ngModel)]="user.password"
+                    name="password"
+                    required
+                    #password="ngModel"
+                  />
+                  @if (password.invalid && password.touched) {
+                    <span *ngIf="password.errors?.required">
+                      Password is required
+                    </span>
+                  } 
                 </div>
 
             <div class="user-info-row">
