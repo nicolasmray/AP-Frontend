@@ -39,6 +39,6 @@ user?: User;
   }
 
   goToEditAccount(): void {
-    this.router.navigate(['editAccount'])
+    this.router.navigate(['account-edit'])
   }
 }
