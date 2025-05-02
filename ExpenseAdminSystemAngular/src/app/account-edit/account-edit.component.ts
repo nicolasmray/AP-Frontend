@@ -42,14 +42,14 @@ user?: User;
 
   confirmPassword: string = '';
 
-  modifyInfo(): void {
-
-    
-  }
-
-
   saveChanges(): void {
-
+    if (this.user && this.userService.authHeader) {
+      console.log('Sending user to update FROM SAVECHANGES():', this.user);
+      this.userService.updateUser(this.user).subscribe({
+        next: () => this.router.navigate(['account']),
+        error: (err) => console.error('Update failed:', err)
+      });
+    }
     this.router.navigate(['account'])
   }
 

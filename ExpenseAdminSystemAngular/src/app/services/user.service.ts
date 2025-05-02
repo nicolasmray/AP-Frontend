@@ -31,10 +31,32 @@ export class UserService {
     });
   }
   createUser(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/user`, user);
+    return this.http.post(`${this.baseUrl}/user`, user, {
+        headers: {
+          "Authorization": this.authHeader,
+           "Content-Type": "application/json"
+        }
+    });
+  }
+  updateUser(user: User): Observable<any> {
+    console.log('--- UPDATE USER REQUEST ---');
+    console.log('URL:',`${this.baseUrl}/user`);
+    console.log('Headers:', this.authHeader);
+    console.log('Payload:', user);
+    console.log('---------------------------');
+    return this.http.put(`${this.baseUrl}/user`, user, {
+      headers: {
+        "Authorization": this.authHeader,
+         "Content-Type": "application/json"
+      }
+    });
   }
   deleteUser(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/user/${id}`);
+    return this.http.delete(`${this.baseUrl}/user/${id}`, {
+      headers: {
+        "Authorization": this.authHeader
+     }
+    });
   }
 
 }
