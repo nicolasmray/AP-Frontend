@@ -39,11 +39,11 @@ export class UserService {
     });
   }
   updateUser(user: User): Observable<any> {
-    console.log('--- UPDATE USER REQUEST ---');
-    console.log('URL:',`${this.baseUrl}/user`);
-    console.log('Headers:', this.authHeader);
-    console.log('Payload:', user);
-    console.log('---------------------------');
+    //console.log('--- UPDATE USER REQUEST ---');
+    //console.log('URL:',`${this.baseUrl}/user`);
+    //console.log('Headers:', this.authHeader);
+    //console.log('Payload:', user);
+    //console.log('---------------------------');
     return this.http.put(`${this.baseUrl}/user`, user, {
       headers: {
         "Authorization": this.authHeader,
