@@ -1,3 +1,6 @@
+<button class="btn btn-primary" (click)="goToAddExpense()">Add Expense</button>
+
+
 @for (expense of expenses; track $index) {
     <app-expense [expense]="expense"></app-expense>
 }
