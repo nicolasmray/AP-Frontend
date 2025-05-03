@@ -17,8 +17,8 @@ export class ExpenseService {
  baseUrl: string = "http://localhost:5038/api";
    constructor(private http: HttpClient) { }
  
-   getExpenses(): Observable<Expense[]> {
-     return this.http.get<Expense[]>(`${this.baseUrl}/expense`, {
+   getExpenses(userId: number): Observable<Expense[]> {
+     return this.http.get<Expense[]>(`${this.baseUrl}/expense?userId=${userId}`, {
       headers: {
         "Authorization": this.authHeader
       } 
