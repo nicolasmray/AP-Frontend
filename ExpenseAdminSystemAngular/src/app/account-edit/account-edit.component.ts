@@ -5,11 +5,12 @@ import { Router } from '@angular/router';
 import { UserComponent } from '../user/user.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-account-edit',
   standalone: true,
-  imports: [UserComponent, FormsModule],
+  imports: [UserComponent, FormsModule, CommonModule],
   templateUrl: './account-edit.component.html',
   styleUrl: './account-edit.component.css'
 })
