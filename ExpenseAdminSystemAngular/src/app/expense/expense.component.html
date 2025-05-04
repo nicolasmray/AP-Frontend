@@ -23,8 +23,11 @@
     <div>
     <b>Created At: </b><span>{{expense.createdAt}}</span>
     </div>
+    <div>
+        <button (click)="onDelete()">Delete Expense</button>
+    </div>
     ...
-    ...
+    ...  
     }
     @else {
     <p>No expense info to display</p>

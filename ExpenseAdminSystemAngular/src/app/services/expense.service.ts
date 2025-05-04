@@ -32,6 +32,11 @@ export class ExpenseService {
     });
    }
    createExpense(expense: Expense): Observable<any> {
+    console.log('--- CREATE EXPENSE REQUEST ---');
+    console.log('URL:',`${this.baseUrl}/expense`);
+    console.log('Headers:', this.authHeader);
+    console.log('Payload:', expense);
+    console.log('---------------------------');
      return this.http.post(`${this.baseUrl}/expense`, expense, {
       headers: {
         "Authorization": this.authHeader,
