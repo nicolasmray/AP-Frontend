@@ -34,6 +34,7 @@ export class ExpenseAddComponent {
     }
 
     addTheExpense() {
+      
       this.expenseService.createExpense(this.expense).subscribe({
         next: () => this.router.navigate(['/expenses']),
         error: (err) => console.error('Error creating expense:', err)
