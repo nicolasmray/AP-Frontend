@@ -21,9 +21,18 @@ export class ExpenseComponent {
   
     // TODO: Call delete method from service when ready
     this.expenseService.deleteExpense(this.expense!.id).subscribe({
-      next: () => this.router.navigate(['/expenses']),
+      next: () => {
+        this.router.navigate(['/expenses']).then(() => {
+          window.location.reload(); // Simple but flashes the page
+        });
+      },
       error: (err) => console.error('Error deleting expense:', err)
     });
   }
+
+
+  onEdit(): void {
+    this.router.navigate(['/expenseEdit'])
+   }
   
 }
