@@ -44,6 +44,18 @@ export class ExpenseService {
       }
   });
    }
+
+  updateExpense(expense: Expense): Observable<any> {
+    return this.http.put(`${this.baseUrl}/expense`, expense, {
+      headers: {
+        "Authorization": this.authHeader,
+         "Content-Type": "application/json"
+      }
+    });
+  }
+
+
+
    deleteExpense(id: number): Observable<any> {
      return this.http.delete(`${this.baseUrl}/expense/${id}`, {
       headers: {
