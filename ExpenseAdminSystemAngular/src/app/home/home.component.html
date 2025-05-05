@@ -3,6 +3,7 @@
     <h2 *ngIf="!username">Welcome to the Expenses App!</h2>
   
     <button *ngIf="!isAuthenticated" (click)="goToLogin()">Login</button>
+    <button *ngIf="!isAuthenticated" (click)="goToCreateAccount()">Create Account</button>
   </div>
   
   

@@ -18,10 +18,22 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.username = localStorage.getItem('username');
     this.isAuthenticated = !!localStorage.getItem('headerValue'); // adjust key if needed
+    //window.location.reload();
+    if (!localStorage.getItem('reloaded')) {
+      localStorage.setItem('reloaded', 'true');
+      window.location.reload();
+    } else {
+      localStorage.removeItem('reloaded'); // Cleanup so it can reload again in future if needed
+    }
+    
   }
 
   goToLogin(): void {
     this.router.navigate(['/login']);
+  }
+
+  goToCreateAccount(): void {
+    this.router.navigate(['/createAccount']);
   }
 }
 
