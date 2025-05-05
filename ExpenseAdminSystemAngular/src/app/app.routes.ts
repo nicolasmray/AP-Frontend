@@ -16,7 +16,7 @@ export const routes: Routes = [
     { path: "account-edit", component: AccountEditComponent },
     { path: "expenses", component: ExpenseListComponent },
     { path: "addExpense", component: ExpenseAddComponent },
-    { path: "expenseEdit", component: ExpenseEditComponent },
+    { path: "expenseEdit/:id", component: ExpenseEditComponent },
     { path: "user", component: UserComponent },
     { path: "user-list", component: UserListComponent },
     { path: "login", component: LoginComponent }

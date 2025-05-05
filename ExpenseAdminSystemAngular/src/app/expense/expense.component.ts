@@ -32,7 +32,7 @@ export class ExpenseComponent {
 
 
   onEdit(): void {
-    this.router.navigate(['/expenseEdit'])
+    this.router.navigate(['/expenseEdit', this.expense!.id])
    }
   
 }
