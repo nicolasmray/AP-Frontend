@@ -43,8 +43,8 @@ export class AppComponent {
   }
   logout() {
     localStorage.clear();
-    //location.reload();
     this.router.navigate(['home'])
+    window.location.reload();
   }
 
 
