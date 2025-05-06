@@ -1,20 +1,18 @@
    <form *ngIf="user" #accountForm="ngForm"> 
 
-
-   
-                <div class="user-info-row">
+                <!-- <div class="user-info-row">
                     <b>Id:</b> <span>{{ user.id }}</span>
-                </div>
+                </div> -->
 
                 <div>
-                    User Name: 
+                    <b style="color: #0056b3;">User Name: </b> 
                     <input type="text" [(ngModel)]="user.userName" name="username" required #username="ngModel">
                     @if (username.invalid) {
                         <span>Username is required</span>
                     }
                 </div>
                 <div>
-                    email: 
+                    <b style="color: #0056b3;">e-Mail: </b>
                     <input
                     type="text"
                     [(ngModel)]="user.email"
@@ -30,7 +28,7 @@
                   }
                 </div>
                 <div>
-                    Password: 
+                    <b style="color: #0056b3;">Password: </b>
                     <input
                     type="password"
                     [(ngModel)]="user.password"
@@ -51,7 +49,7 @@
                 </div>
 
                 <div>
-                Confirm Password: 
+                 <b style="color: #0056b3;">Confirm Password: </b>
                <input
                type="password"
                [(ngModel)]="confirmPassword"

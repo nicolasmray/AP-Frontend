@@ -1,0 +1,24 @@
+/* Add Expense Button */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* No Expenses Message */
+  .no-expenses-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+  

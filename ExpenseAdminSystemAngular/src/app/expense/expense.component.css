@@ -1,0 +1,90 @@
+.expense-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+
+.expense-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.expense-card div {
+  margin: 0.5rem 0;
+}
+
+.expense-card b {
+  color: #007bff;
+}
+
+/* Buttons */
+.expense-card button {
+  margin-right: 10px;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.expense-card button:first-of-type {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.expense-card button:first-of-type:hover {
+  background-color: #e0a800;
+}
+
+.expense-card button:last-of-type {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.expense-card button:last-of-type:hover {
+  background-color: #c82333;
+}
+
+
+/* Buttons container - keep them side by side */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  /* Edit Button - Big Blue */
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Delete Button - Small Red */
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
