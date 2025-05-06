@@ -1,5 +1,6 @@
 @if (expense) {
-    <div>
+<div class="expense-card"> 
+    <div >
         <b>Id: </b><span>{{expense.id}}</span>
     </div>
     <div>
@@ -23,14 +24,12 @@
     <div>
     <b>Created At: </b><span>{{expense.createdAt}}</span>
     </div>
-    <div>
-        <button (click)="onEdit()">Edit</button>
-    </div>
-    <div>
-        <button (click)="onDelete()">Delete</button>
-    </div>
-    ...
-    ...  
+    <div class="button-group">
+        <button class="edit-button" (click)="onEdit()">Edit</button>
+        <button class="delete-button" (click)="onDelete()">Delete</button>
+      </div>
+  
+</div>
     }
     @else {
     <p>No expense info to display</p>

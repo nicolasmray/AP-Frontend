@@ -4,11 +4,12 @@ import { ExpenseService } from '../services/expense.service';
 import { ExpenseComponent } from '../expense/expense.component';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-expense-list',
   standalone: true,
-  imports: [ExpenseComponent],
+  imports: [ExpenseComponent, CommonModule],
   templateUrl: './expense-list.component.html',
   styleUrl: './expense-list.component.css'
 })

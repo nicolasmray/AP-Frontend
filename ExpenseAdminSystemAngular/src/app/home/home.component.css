@@ -1,11 +1,41 @@
+/* Welcome Message Style */
 .welcome-message {
     text-align: center;
     margin-top: 50px;
     font-family: Arial, sans-serif;
-  }
-  
-  button {
+}
+
+/* Button Style */
+button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
+    padding: 12px 24px; /* Add padding for more button space */
+    font-size: 18px; /* Increase font size */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 200px; /* Set width for consistency */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Specific Login Button Style */
+.btn-login {
+    background-color: #007bff; /* Blue color for Login */
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px; /* Space between Login and Create Account */
+}
+
+.btn-login:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific Create Account Button Style */
+.btn-create-account {
+    background-color: #6c757d; /* Grey color for Create Account */
+    color: white;
+    font-weight: bold;
+}
+
+.btn-create-account:hover {
+    background-color: #5a6368; /* Darker grey on hover */
+}

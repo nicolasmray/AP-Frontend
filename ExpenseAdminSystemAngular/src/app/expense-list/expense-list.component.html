@@ -1,6 +1,11 @@
 <button class="btn btn-primary" (click)="goToAddExpense()">Add Expense</button>
 
-
-@for (expense of expenses; track $index) {
+<div *ngIf="expenses.length > 0; else noExpenses">
+  @for (expense of expenses; track $index) {
     <app-expense [expense]="expense"></app-expense>
-}
+  }
+</div>
+
+<ng-template #noExpenses>
+  <p class="no-expenses-message">No expenses to show. Add Expenses</p>
+</ng-template>

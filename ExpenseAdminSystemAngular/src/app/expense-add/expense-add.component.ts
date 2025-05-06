@@ -18,8 +18,8 @@ export class ExpenseAddComponent {
     userId: parseInt(localStorage.getItem('id') || '0', 10),
     amount: 0,
     expenseDate: new Date(),  
-    categoryId: 0,
-    currencyId: 0,
+    categoryId: 1,
+    currencyId: 1,
     comments: '',
     createdAt: new Date()
   };
