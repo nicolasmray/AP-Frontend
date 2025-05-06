@@ -1,0 +1,64 @@
+/* User Info Card */
+.user-info-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  /* Form Title */
+  .form-title {
+    color: #0056b3;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Form Rows */
+  .user-info-row {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .user-info-row b {
+    color: #0056b3;
+    width: 140px;
+    min-width: 140px;
+    display: inline-block;
+  }
+  
+  /* Input Styling */
+  .user-info-row input {
+    flex: 1;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button Group */
+  .button-group {
+    margin-top: 1.5rem;
+    text-align: right;
+  }
+  
+  /* Reusable Button Style */
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
