@@ -43,6 +43,14 @@ user?: User;
   }
 
   deleteAccount(): void {
+    const confirmed = confirm('Are you sure you want to delete your account? This action cannot be undone.');
+  
+    if (!confirmed) {
+      // User canceled deletion — navigate back to account or do nothing
+      this.router.navigate(['account']);
+      return;
+    }
+  
     const userIdString = localStorage.getItem('id');
     if (!userIdString) {
       console.error('No user ID in local storage.');
@@ -57,9 +65,6 @@ user?: User;
         localStorage.removeItem('headerValue');
         localStorage.removeItem('username');
         localStorage.removeItem('id');
-  
-        // Optionally, clear everything
-        // localStorage.clear();
   
         // Navigate after successful deletion
         this.router.navigate(['home']);

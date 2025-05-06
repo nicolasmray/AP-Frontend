@@ -1,5 +1,21 @@
-<button class="btn btn-primary" (click)="goToAddExpense()">Add Expense</button>
+<div class="top-bar">
+    <button class="btn btn-primary" (click)="goToAddExpense()">Add Expense</button>
+    <span class="total-amount">Total (EUR): {{ totalAmountInEuro | number:'1.2-2' }}</span>
+     
+     <!-- <label for="currency-select">Show Total In:</label>
+     <select [(ngModel)]="selectedCurrencyId" name="currency-select">
+       <option *ngFor="let currency of currencies" [value]="currency.id">
+         {{ currency.name }}
+       </option>
+     </select>
+   
+     <span class="total-amount">
+        Total ({{ getSelectedCurrencyName() }}):
+        {{ totalAmountInSelectedCurrency | number:'1.2-2' }}
+      </span> -->
+      
 
+  </div> 
 <div *ngIf="expenses.length > 0; else noExpenses">
   @for (expense of expenses; track $index) {
     <app-expense [expense]="expense"></app-expense>

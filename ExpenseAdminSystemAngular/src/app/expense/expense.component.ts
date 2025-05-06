@@ -14,6 +14,23 @@ import { UserService } from '../services/user.service';
 export class ExpenseComponent {
   @Input() expense?: Expense; 
 
+  categoryMap: { [key: number]: string } = {
+    1: 'Food',
+    2: 'Transport',
+    3: 'Entertainment',
+    4: 'Utilities',
+    5: 'Health',
+    6: 'Other'
+  };
+  
+  currencyMap: { [key: number]: string } = {
+    1: 'USD',
+    2: 'EUR',
+    3: 'GBP',
+    4: 'DKK',
+    5: 'SEK'
+  };
+
   constructor(private expenseService: ExpenseService, private router: Router, private userService: UserService) {}
   onDelete(): void {
     // This is where you'll call the delete method from your service
