@@ -1,4 +1,4 @@
-<div class="user-info-card">
+<!-- <div class="user-info-card">
     <h2 class="form-title">Add New Expense</h2>
   
     <form (ngSubmit)="addTheExpense()" #expenseForm="ngForm">
@@ -46,6 +46,61 @@
         <button type="submit" class="btn-primary">Submit</button>
       </div>
       
+    </form>
+  </div> -->
+  
+
+  <div class="user-info-card">
+    <h2 class="form-title">Add New Expense</h2>
+  
+    <form (ngSubmit)="addTheExpense()" #expenseForm="ngForm">
+      <div class="user-info-row">
+        <b>Amount:</b>
+        <input type="number" [(ngModel)]="expense.amount" name="amount" required />
+      </div>
+  
+      <div class="user-info-row">
+        <b>Currency:</b>
+        <select [(ngModel)]="expense.currencyId" name="currencyId" required>
+          <option [value]="1">USD</option>
+          <option [value]="2">EUR</option>
+          <option [value]="3">GBP</option>
+          <option [value]="4">DKK</option>
+          <option [value]="5">SEK</option>
+        </select>
+      </div>
+  
+      <div class="user-info-row">
+        <b>Expense Date:</b>
+        <input type="date" [(ngModel)]="expense.expenseDate" name="expenseDate" required />
+      </div>
+  
+      <div class="user-info-row">
+        <b>Category:</b>
+        <select [(ngModel)]="expense.categoryId" name="categoryId" required>
+          <option [value]="1">Food</option>
+          <option [value]="2">Transport</option>
+          <option [value]="3">Entertainment</option>
+          <option [value]="4">Utilities</option>
+          <option [value]="5">Health</option>
+          <option [value]="6">Other</option>
+        </select>
+      </div>
+  
+      <div class="user-info-row">
+        <b>Comments:</b>
+        <input type="text" [(ngModel)]="expense.comments" name="comments" />
+      </div>
+  
+      <!-- Banner for invalid form -->
+      <div *ngIf="!expenseForm.valid && expenseForm.submitted" class="warning-banner">
+        You should complete the required fields to submit an expense.
+      </div>
+  
+      <!-- Submit button shown only when form is valid -->
+      <div class="button-group" *ngIf="expenseForm.valid">
+        <button type="submit" class="btn-primary">Submit</button>
+      </div>
     </form>
   </div>
   

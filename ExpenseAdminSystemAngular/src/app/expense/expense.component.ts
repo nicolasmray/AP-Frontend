@@ -32,21 +32,42 @@ export class ExpenseComponent {
   };
 
   constructor(private expenseService: ExpenseService, private router: Router, private userService: UserService) {}
-  onDelete(): void {
-    // This is where you'll call the delete method from your service
-    //console.log('Delete clicked for expense ID:', this.expense?.id);
   
-    // TODO: Call delete method from service when ready
-    this.expenseService.deleteExpense(this.expense!.id).subscribe({
+  // onDelete(): void {
+  //   // This is where you'll call the delete method from your service
+  //   //console.log('Delete clicked for expense ID:', this.expense?.id);
+  
+  //   // TODO: Call delete method from service when ready
+  //   this.expenseService.deleteExpense(this.expense!.id).subscribe({
+  //     next: () => {
+  //       this.router.navigate(['/expenses']).then(() => {
+  //         window.location.reload(); // Simple but flashes the page
+  //       });
+  //     },
+  //     error: (err) => console.error('Error deleting expense:', err)
+  //   });
+  // }
+
+  onDelete(): void {
+    const confirmed = confirm('Are you sure you want to delete this expense? This action cannot be undone.');
+  
+    if (!confirmed) {
+      this.router.navigate(['/expenses']);
+      return;
+    }
+  
+    if (!this.expense) return;
+  
+    this.expenseService.deleteExpense(this.expense.id).subscribe({
       next: () => {
         this.router.navigate(['/expenses']).then(() => {
-          window.location.reload(); // Simple but flashes the page
+          window.location.reload(); // optional, depending on how your expenses page loads
         });
       },
       error: (err) => console.error('Error deleting expense:', err)
     });
   }
-
+  
 
   onEdit(): void {
     this.router.navigate(['/expenseEdit', this.expense!.id])
