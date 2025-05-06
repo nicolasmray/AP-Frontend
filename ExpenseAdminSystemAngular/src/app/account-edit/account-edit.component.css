@@ -1,48 +1,59 @@
-/* User Info Card */
-.user-info-card {
-    background-color: white;
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    max-width: 600px;
-    margin: 2rem auto;
-  }
-  
-  /* Individual Rows */
-  .user-info-row {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-  
-  .user-info-row b {
-    color: #0056b3;
-    display: inline-block;
-    width: 120px;
-  }
-  
-  /* Button Group */
-  .button-group {
-    margin-top: 1.5rem;
-    text-align: right;
-  }
-  
-  /* Reusable Button Style */
-  .btn-primary {
+/* Reuse from existing styles */
+.btn-primary {
     background-color: #007bff;
-    color: white;
     border: none;
-    padding: 0.5rem 1.2rem;
-    border-radius: 5px;
-    font-weight: bold;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
   }
   
   .btn-primary:hover {
     background-color: #0056b3;
   }
   
-  .div-row b {
-    color: #0056b3;
+  /* Form styling */
+  .account-edit-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
   }
+  
+  /* Consistent row layout */
+  .user-info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .user-info-row b {
+    color: #0056b3;
+    margin-bottom: 0.3rem;
+  }
+  
+  .user-info-row input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Error messages */
+  .error {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Button group */
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+  }
+  

@@ -3,20 +3,20 @@
     <div >
         <b>Id: </b><span>{{expense.id}}</span>
     </div>
-    <div>
+    <!-- <div>
         <b>User Id: </b><span>{{expense.userId}}</span>
-    </div>
+    </div> -->
     <div>
-        <b>Amount: </b><span>{{expense.amount}}</span>
+        <b>Amount: </b><span>{{expense.amount}}  </span><span>  {{ currencyMap[expense.currencyId] }}</span>
     </div>
     <div>
         <b>Expense Date: </b><span>{{expense.expenseDate}}</span>
     </div>
     <div>
-        <b>Category Id: </b><span>{{expense.categoryId}}</span>
+        <b>Category: </b><span>{{ categoryMap[expense.categoryId] }}</span>
     </div>
     <div>
-        <b>Currency Id: </b><span>{{expense.currencyId}}</span>
+        <b>Currency: </b><span>{{ currencyMap[expense.currencyId] }}</span>
     </div>
     <div>
         <b>Comments: </b><span>{{expense.comments}}</span>
