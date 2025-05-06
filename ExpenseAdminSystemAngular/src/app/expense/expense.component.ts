@@ -3,11 +3,12 @@ import { Expense } from '../model/expense';
 import { ExpenseService } from '../services/expense.service';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-expense',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './expense.component.html',
   styleUrl: './expense.component.css'
 })

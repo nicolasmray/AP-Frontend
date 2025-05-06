@@ -3,11 +3,12 @@ import { User } from '../model/user';
 import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 import { UserComponent } from '../user/user.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [UserComponent],
+  imports: [UserComponent, MatIconModule],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })

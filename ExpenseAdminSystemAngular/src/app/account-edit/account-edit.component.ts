@@ -6,11 +6,12 @@ import { UserComponent } from '../user/user.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-account-edit',
   standalone: true,
-  imports: [UserComponent, FormsModule, CommonModule],
+  imports: [UserComponent, FormsModule, CommonModule, MatIconModule],
   templateUrl: './account-edit.component.html',
   styleUrl: './account-edit.component.css'
 })
