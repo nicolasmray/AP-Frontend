@@ -1,32 +1,37 @@
-<h2>Edit Expense</h2>
-
-<form  *ngIf="expense" (ngSubmit)="editExpense()" #expenseForm="ngForm">
-  <div>
-    <label>Amount:</label>
-    <input type="number" [(ngModel)]="expense.amount" name="amount" required />
+<div class="user-info-card">
+    <h2 class="form-title">Edit Expense</h2>
+  
+    <form *ngIf="expense" (ngSubmit)="editExpense()" #expenseForm="ngForm">
+  
+      <div class="user-info-row">
+        <b>Amount:</b>
+        <input type="number" [(ngModel)]="expense.amount" name="amount" required />
+      </div>
+  
+      <div class="user-info-row">
+        <b>Expense Date:</b>
+        <input type="date" [(ngModel)]="expense.expenseDate" name="expenseDate" required />
+      </div>
+  
+      <div class="user-info-row">
+        <b>Category ID:</b>
+        <input type="number" [(ngModel)]="expense.categoryId" name="categoryId" required />
+      </div>
+  
+      <div class="user-info-row">
+        <b>Currency ID:</b>
+        <input type="number" [(ngModel)]="expense.currencyId" name="currencyId" required />
+      </div>
+  
+      <div class="user-info-row">
+        <b>Comments:</b>
+        <input type="text" [(ngModel)]="expense.comments" name="comments" />
+      </div>
+  
+      <div class="button-group">
+        <button type="submit" class="btn-primary">Submit</button>
+      </div>
+  
+    </form>
   </div>
-
-  <div>
-    <label>Expense Date:</label>
-    <input type="date" [(ngModel)]="expense.expenseDate" name="expenseDate" required />
-  </div>
-
-  <div>
-    <label>Category ID:</label>
-    <input type="number" [(ngModel)]="expense.categoryId" name="categoryId" required />
-  </div>
-
-  <div>
-    <label>Currency ID:</label>
-    <input type="number" [(ngModel)]="expense.currencyId" name="currencyId" required />
-  </div>
-
-  <div>
-    <label>Comments:</label>
-    <input type="text" [(ngModel)]="expense.comments" name="comments" />
-  </div>
-
-  <button type="submit">Submit</button>
-</form>
-
-
+  
