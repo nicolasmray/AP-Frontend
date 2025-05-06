@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { Expense } from '../model/expense';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-expense-add',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './expense-add.component.html',
   styleUrl: './expense-add.component.css'
 })
@@ -16,11 +17,11 @@ export class ExpenseAddComponent {
   expense: Expense = {
     id: 5, // can be omitted if auto-generated
     userId: parseInt(localStorage.getItem('id') || '0', 10),
-    amount: 0,
+    amount: null!,
     expenseDate: new Date(),  
-    categoryId: 1,
-    currencyId: 1,
-    comments: '',
+    categoryId: null!,
+    currencyId: 2,
+    comments: "",
     createdAt: new Date()
   };
 
