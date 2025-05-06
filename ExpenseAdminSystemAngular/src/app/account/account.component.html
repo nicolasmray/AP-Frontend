@@ -12,10 +12,18 @@
       <div class="user-info-row">
         <b>Created At:</b> <span>{{ user.createdAt }}</span>
       </div>
+      
       <div class="button-group">
-        <button class="btn-primary" type="button" (click)="goToEditAccount()">Edit Account</button>
-        <button class="btn-delete" type="button" (click)="deleteAccount()">Delete Account</button>
-    </div>
+        <button class="btn-primary" type="button" (click)="goToEditAccount()">
+          <mat-icon>edit</mat-icon>
+          Edit Account
+        </button>
+        <button class="btn-delete" type="button" (click)="deleteAccount()">
+          <mat-icon>delete</mat-icon>
+          Delete Account
+        </button>
+      </div>
+      
     </div>
   } @else {
     <p>No user info to display</p>

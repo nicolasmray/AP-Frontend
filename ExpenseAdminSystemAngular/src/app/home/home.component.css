@@ -3,39 +3,59 @@
     text-align: center;
     margin-top: 50px;
     font-family: Arial, sans-serif;
-}
-
-/* Button Style */
-button {
-    margin-top: 20px;
-    padding: 12px 24px; /* Add padding for more button space */
-    font-size: 18px; /* Increase font size */
-    border-radius: 5px; /* Rounded corners */
-    border: none; /* Remove border */
-    cursor: pointer; /* Pointer cursor on hover */
-    width: 200px; /* Set width for consistency */
-    transition: background-color 0.3s ease; /* Smooth color transition */
-}
-
-/* Specific Login Button Style */
-.btn-login {
-    background-color: #007bff; /* Blue color for Login */
-    color: white;
+  }
+  
+  /* Shared button styles */
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* space between icon and text */
+    margin: 10px auto;
+    padding: 12px 24px;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 15px; /* Space between Login and Create Account */
-}
-
-.btn-login:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Specific Create Account Button Style */
-.btn-create-account {
-    background-color: #6c757d; /* Grey color for Create Account */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Specific styles */
+  .btn-login {
+    background-color: #007bff;
     color: white;
-    font-weight: bold;
-}
-
-.btn-create-account:hover {
-    background-color: #5a6368; /* Darker grey on hover */
-}
+  }
+  
+  .btn-login:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-create-account {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn-create-account:hover {
+    background-color: #5a6368;
+  }
+  
+  /* Optional: smaller icons */
+  mat-icon {
+    font-size: 20px;
+  }
+  
+  .welcome-message h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    background-color: #e9ecef;
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  

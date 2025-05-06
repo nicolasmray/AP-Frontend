@@ -1,10 +1,31 @@
+<!-- <div class="welcome-message">
+    <h2 *ngIf="username">Hello {{ username }}! Welcome to the Expenses App!</h2>
+    <h2 *ngIf="!username">Welcome to the Expenses App!</h2>
+  
+    <button *ngIf="!isAuthenticated" class="btn-login" (click)="goToLogin()">
+        <b>Login</b>
+        <mat-icon>login</mat-icon>
+
+    </button>
+    <button *ngIf="!isAuthenticated" class="btn-create-account" (click)="goToCreateAccount()">
+        <mat-icon>person_add</mat-icon>
+        <b>Create Account</b>
+    </button>
+</div> -->
+
 <div class="welcome-message">
     <h2 *ngIf="username">Hello {{ username }}! Welcome to the Expenses App!</h2>
     <h2 *ngIf="!username">Welcome to the Expenses App!</h2>
   
-    <button *ngIf="!isAuthenticated" class="btn-login" (click)="goToLogin()">Login</button>
-    <button *ngIf="!isAuthenticated" class="btn-create-account" (click)="goToCreateAccount()">Create Account</button>
-</div>
-
+    <button *ngIf="!isAuthenticated" class="btn-login" (click)="goToLogin()">
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+  
+    <button *ngIf="!isAuthenticated" class="btn-create-account" (click)="goToCreateAccount()">
+      <mat-icon>person_add</mat-icon>
+      <span>Create Account</span>
+    </button>
+  </div>
   
   

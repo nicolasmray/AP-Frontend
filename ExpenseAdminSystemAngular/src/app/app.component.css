@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+
 }
 
 body {
@@ -86,4 +86,44 @@ color: white;
 nav button.logout-button:hover {
 background-color: white;
 color: #dc3545;
+}
+
+
+/* Button styling */
+button.home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem; /* You can adjust this for better spacing */
+  font-size: 1.2rem;  /* Adjust font size to ensure text is not cut off */
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.home-button:hover {
+  background-color: #0056b3;
+}
+
+button.home-button mat-icon {
+  margin-right: 8px; /* Space between the icon and the text */
+  font-size: 1.5rem; /* Adjust the size of the icon */
+}
+
+/* Optional: If you want the icon to be larger */
+mat-icon {
+  font-size: 2rem;
+  color: #f8f9fa;
+}
+
+button.logout-button mat-icon {
+  font-size: 24px; /* Try smaller like 16px or 14px if still too big */
+  vertical-align: middle;
+}
+
+button.logout-button {
+  padding: 0.3rem 0.6rem; /* Smaller padding */
 }

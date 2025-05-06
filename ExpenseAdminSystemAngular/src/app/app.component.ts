@@ -10,11 +10,12 @@ import { CurrencyListComponent } from './currency-list/currency-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HomeComponent, UserComponent, UserListComponent, ExpenseComponent, ExpenseListComponent, CurrencyComponent, CurrencyListComponent, CategoryComponent, CategoryListComponent],
+  imports: [RouterOutlet, CommonModule, HomeComponent, UserComponent, UserListComponent, ExpenseComponent, ExpenseListComponent, CurrencyComponent, CurrencyListComponent, CategoryComponent, CategoryListComponent, MatIconModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
