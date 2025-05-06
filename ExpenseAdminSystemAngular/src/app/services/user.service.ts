@@ -31,13 +31,9 @@ export class UserService {
     });
   }
   createUser(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/user`, user, {
-        headers: {
-          "Authorization": this.authHeader,
-           "Content-Type": "application/json"
-        }
-    });
+    return this.http.post(`${this.baseUrl}/user`, user);
   }
+  
   updateUser(user: User): Observable<any> {
     //console.log('--- UPDATE USER REQUEST ---');
     //console.log('URL:',`${this.baseUrl}/user`);

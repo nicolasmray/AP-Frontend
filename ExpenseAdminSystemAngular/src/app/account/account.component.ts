@@ -41,4 +41,35 @@ user?: User;
   goToEditAccount(): void {
     this.router.navigate(['account-edit'])
   }
+
+  deleteAccount(): void {
+    const userIdString = localStorage.getItem('id');
+    if (!userIdString) {
+      console.error('No user ID in local storage.');
+      return;
+    }
+  
+    const userId = Number(userIdString);
+  
+    this.userService.deleteUser(userId).subscribe({
+      next: () => {
+        // Clear user-related data from local storage
+        localStorage.removeItem('headerValue');
+        localStorage.removeItem('username');
+        localStorage.removeItem('id');
+  
+        // Optionally, clear everything
+        // localStorage.clear();
+  
+        // Navigate after successful deletion
+        this.router.navigate(['home']);
+      },
+      error: (err) => {
+        console.error('Failed to delete user:', err);
+      }
+    });
+  }
+  
+
+
 }
