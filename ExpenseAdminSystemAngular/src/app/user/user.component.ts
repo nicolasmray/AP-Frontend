@@ -11,12 +11,11 @@ import { User } from '../model/user';
 export class UserComponent {
   // user: User = {
   //   id: 1,
-  //   userName: 'Nico',
-  //   eMail: 'nico@mail.com',
+  //   userName: 'Admin',
+  //   eMail: 'admin@mail.com',
   //   password: 'HardPassword',
   //   createdAt: new Date(),
   // };
-
   @Input() user?: User; 
 }
 

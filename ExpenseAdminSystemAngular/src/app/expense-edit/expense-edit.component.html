@@ -49,3 +49,10 @@
     </form>
   </div>
   
+  <div *ngIf="loading" class="loading-indicator">
+    Loading...
+  </div>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
