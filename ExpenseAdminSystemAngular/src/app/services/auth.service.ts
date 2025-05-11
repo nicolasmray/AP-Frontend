@@ -17,10 +17,8 @@ export class AuthService {
       password
     }).pipe(
       catchError((error) => {
-        // Optional: log error or transform it
         console.error('AuthService error:', error);
 
-        // Re-throw the error so component can still handle it
         return throwError(() => error);
       })
     );

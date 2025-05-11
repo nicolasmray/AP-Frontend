@@ -1,70 +1,3 @@
-// import { HttpClient } from '@angular/common/http';
-// import { Injectable } from '@angular/core';
-// import { Observable } from 'rxjs';
-// import { Expense } from '../model/expense';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-
-// export class ExpenseService {
-
-
-//   get authHeader(): string {
-//     return localStorage["headerValue"]; //"Basic am9objpzZWNyZXQ=";
-//   }   
-
-//  baseUrl: string = "http://localhost:5038/api";
-//    constructor(private http: HttpClient) { }
- 
-//    getExpenses(userId: number): Observable<Expense[]> {
-//      return this.http.get<Expense[]>(`${this.baseUrl}/expense?userId=${userId}`, {
-//       headers: {
-//         "Authorization": this.authHeader
-//       } 
-//     });
-//    }
-//    getExpense(id: number): Observable<Expense> {
-//      return this.http.get<Expense>(`${this.baseUrl}/expense/${id}`, {
-//       headers: {
-//         "Authorization": this.authHeader
-//       } 
-//     });
-//    }
-//    createExpense(expense: Expense): Observable<any> {
-//     console.log('--- CREATE EXPENSE REQUEST ---');
-//     console.log('URL:',`${this.baseUrl}/expense`);
-//     console.log('Headers:', this.authHeader);
-//     console.log('Payload:', expense);
-//     console.log('---------------------------');
-//      return this.http.post(`${this.baseUrl}/expense`, expense, {
-//       headers: {
-//         "Authorization": this.authHeader,
-//          "Content-Type": "application/json"
-//       }
-//   });
-//    }
-
-//   updateExpense(expense: Expense): Observable<any> {
-//     return this.http.put(`${this.baseUrl}/expense`, expense, {
-//       headers: {
-//         "Authorization": this.authHeader,
-//          "Content-Type": "application/json"
-//       }
-//     });
-//   }
-
-
-
-//    deleteExpense(id: number): Observable<any> {
-//      return this.http.delete(`${this.baseUrl}/expense/${id}`, {
-//       headers: {
-//         "Authorization": this.authHeader
-//      }
-//     });
-//    }
-// }
-
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
@@ -84,7 +17,6 @@ export class ExpenseService {
 
   private handleError(error: HttpErrorResponse) {
     console.error('ExpenseService error:', error);
-    // Create a new error that preserves the status code
     const transformedError = new Error(error.error?.message || error.message);
     (transformedError as any).status = error.status;
     return throwError(() => transformedError);

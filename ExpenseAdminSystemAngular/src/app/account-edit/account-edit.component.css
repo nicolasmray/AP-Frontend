@@ -1,4 +1,4 @@
-/* Reuse from existing styles */
+
 .btn-primary {
     background-color: #007bff;
     border: none;
@@ -14,7 +14,7 @@
     background-color: #0056b3;
   }
   
-  /* Form styling */
+ 
   .account-edit-form {
     max-width: 500px;
     margin: 0 auto;
@@ -24,7 +24,7 @@
     background-color: #f9f9f9;
   }
   
-  /* Consistent row layout */
+  
   .user-info-row {
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
     border: 1px solid #ccc;
   }
   
-  /* Error messages */
+ 
   .error {
     color: red;
     font-size: 0.85rem;
