@@ -26,9 +26,7 @@ export class AppComponent {
   constructor(private router: Router) {}
   
   ngOnInit() {
-    // Check localStorage at the start
     this.isAuthenticated = !!localStorage.getItem('headerValue');
-    // The '!!' turns it into true/false directly
   }
 
 

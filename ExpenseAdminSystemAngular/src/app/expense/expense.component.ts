@@ -35,14 +35,12 @@ export class ExpenseComponent {
   constructor(private expenseService: ExpenseService, private router: Router, private userService: UserService) {}
   
   // onDelete(): void {
-  //   // This is where you'll call the delete method from your service
   //   //console.log('Delete clicked for expense ID:', this.expense?.id);
   
-  //   // TODO: Call delete method from service when ready
   //   this.expenseService.deleteExpense(this.expense!.id).subscribe({
   //     next: () => {
   //       this.router.navigate(['/expenses']).then(() => {
-  //         window.location.reload(); // Simple but flashes the page
+  //         window.location.reload(); 
   //       });
   //     },
   //     error: (err) => console.error('Error deleting expense:', err)
@@ -62,7 +60,7 @@ export class ExpenseComponent {
     this.expenseService.deleteExpense(this.expense.id).subscribe({
       next: () => {
         this.router.navigate(['/expenses']).then(() => {
-          window.location.reload(); // optional, depending on how your expenses page loads
+          window.location.reload(); 
         });
       },
       error: (err) => console.error('Error deleting expense:', err)

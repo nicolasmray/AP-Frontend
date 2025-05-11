@@ -1,102 +1,15 @@
-<!-- <main>
-  <div>
-    <p>Frontend working properly!</p>
-     <app-user></app-user>
-    <app-user-list></app-user-list>
-    <app-expense-list></app-expense-list>
-    <app-currency-list></app-currency-list>
-    <app-category-list></app-category-list>
-  </div>
-</main> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ------------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<header>
-  <h1>Expense Tracker</h1>
-</header>
-
-
-<nav>
-  <a routerLink="/" routerLinkActive="active">Home</a>
-  <a routerLink="/expenses" routerLinkActive="active">Expenses</a>
-  <a routerLink="/categories" routerLinkActive="active">Categories</a>
-</nav>
-
-
-<main>
-  <router-outlet></router-outlet>
-  <app-user-list></app-user-list>
-  <app-expense-list></app-expense-list>
-  <app-currency-list></app-currency-list>
-  <app-category-list></app-category-list>
-</main>
-
-
-<footer>
-  <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
-</footer>
-
-
--->
-
-
-
 
 <!-- app.component.html -->
 <header>
   <h1>Expense Tracker</h1>
 </header>
 
-
 <nav *ngIf="isAuthenticated">
   <!-- <button routerLink="/home" routerLinkActive="active">Home</button> -->
-
- 
   <!-- <button (click)="redirectHome()">Home</button> -->
   <button (click)="redirectHome()" class="home-button">
     <mat-icon>home</mat-icon>
   </button>
-  
-
   <button (click)="redirectExpenses()">Expenses</button>
   <button (click)="redirectAccount()">Account</button>
   <button class="logout-button" (click)="logout()">
@@ -104,38 +17,13 @@
   </button>
 </nav>
 
-
 <main>
-  <router-outlet></router-outlet>
- 
-  <!--
-  <app-user-list></app-user-list>
-  <app-expense-list></app-expense-list>
-  <app-currency-list></app-currency-list>
-  <app-category-list></app-category-list>
-  -->
-
-
+  <router-outlet></router-outlet> 
 </main>
-
 
 <footer>
   <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <router-outlet />

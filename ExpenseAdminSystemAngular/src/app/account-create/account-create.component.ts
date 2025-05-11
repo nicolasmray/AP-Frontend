@@ -24,7 +24,7 @@ user?: User;
 
   ngOnInit(): void {
     this.user = {
-      id: 0, // or undefined/null if you auto-generate it server-side
+      id: 0, 
       userName: '',
       email: '',
       password: '',
@@ -36,7 +36,7 @@ user?: User;
   saveChanges(): void {
     if (!this.user) return;
   
-    // First update the user details
+    // Update the user details
     const updatedUser = { ...this.user };
     this.userService.createUser(this.user).subscribe({
       next: () => {
@@ -48,12 +48,10 @@ user?: User;
               localStorage.setItem('username', auth.username);
               localStorage.setItem('id', auth.id);
             }
-            // Navigate only after authentication completes
             this.router.navigate(['home']);
           },
           error: (err) => {
             console.error('Authentication failed:', err);
-            // Still navigate even if auth fails (or handle differently)
             this.router.navigate(['account']);
           }
         });

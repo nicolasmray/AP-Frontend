@@ -224,10 +224,8 @@ describe('ExpenseAddComponent - Unit + Integration Tests', () => {
     });
 
     // it('should redirect to login if no authHeader', () => {
-    //   // Clear any existing auth header in localStorage
     //   localStorage.removeItem('headerValue');
       
-    //   // Mock the UserService's authHeader to return null
     //   spyOnProperty(expenseService, 'authHeader', 'get').and.returnValue('');
     //   const navigateSpy = spyOn(router, 'navigate');
     

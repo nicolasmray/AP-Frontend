@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   color: #333;
 }
 
-/* Header */
+
 header {
   background: #007bff;
   color: white;
@@ -19,7 +19,7 @@ header {
   text-align: center;
 }
 
-/* Navigation */
+
 nav {
   display: flex;
   justify-content: center;
@@ -38,14 +38,14 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Main Content */
+
 main {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
 }
 
-/* Footer */
+
 footer {
   text-align: center;
 
@@ -56,7 +56,7 @@ footer {
   width: 100%;
 }
 
-/* Navigation Buttons */
+
 nav button {
 background-color: transparent;
 border: 2px solid white;
@@ -75,9 +75,9 @@ color: #0056b3;
 }
 
 
-/* Special style for Logout button */
+
 nav button.logout-button {
-background-color: #dc3545; /* red */
+background-color: #dc3545;
 border-color: #dc3545;
 color: white;
 }
@@ -89,13 +89,13 @@ color: #dc3545;
 }
 
 
-/* Button styling */
+
 button.home-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem; /* You can adjust this for better spacing */
-  font-size: 1.2rem;  /* Adjust font size to ensure text is not cut off */
+  padding: 0.5rem 1rem; 
+  font-size: 1.2rem; 
   border: 2px solid #007bff;
   border-radius: 6px;
   background-color: #007bff;
@@ -109,21 +109,21 @@ button.home-button:hover {
 }
 
 button.home-button mat-icon {
-  margin-right: 8px; /* Space between the icon and the text */
-  font-size: 1.5rem; /* Adjust the size of the icon */
+  margin-right: 8px; 
+  font-size: 1.5rem; 
 }
 
-/* Optional: If you want the icon to be larger */
+
 mat-icon {
   font-size: 2rem;
   color: #f8f9fa;
 }
 
 button.logout-button mat-icon {
-  font-size: 24px; /* Try smaller like 16px or 14px if still too big */
+  font-size: 24px; 
   vertical-align: middle;
 }
 
 button.logout-button {
-  padding: 0.3rem 0.6rem; /* Smaller padding */
+  padding: 0.3rem 0.6rem; 
 }

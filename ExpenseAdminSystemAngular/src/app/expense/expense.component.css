@@ -20,7 +20,7 @@
   color: #007bff;
 }
 
-/* Buttons */
+
 .expense-card button {
   margin-right: 10px;
   padding: 0.4rem 0.8rem;
@@ -49,14 +49,14 @@
 }
 
 
-/* Buttons container - keep them side by side */
+
 .button-group {
     display: flex;
     gap: 10px;
     margin-top: 1rem;
   }
   
-  /* Edit Button - Big Blue */
+
   .edit-button {
     background-color: #007bff;
     color: white;
@@ -72,7 +72,7 @@
     background-color: #0056b3;
   }
   
-  /* Delete Button - Small Red */
+
   .delete-button {
     background-color: #dc3545;
     color: white;

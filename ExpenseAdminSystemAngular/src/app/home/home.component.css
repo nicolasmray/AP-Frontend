@@ -1,16 +1,16 @@
-/* Welcome Message Style */
+
 .welcome-message {
     text-align: center;
     margin-top: 50px;
     font-family: Arial, sans-serif;
   }
   
-  /* Shared button styles */
+ 
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* space between icon and text */
+    gap: 8px; 
     margin: 10px auto;
     padding: 12px 24px;
     font-size: 16px;
@@ -22,7 +22,7 @@
     transition: background-color 0.3s ease;
   }
   
-  /* Specific styles */
+ 
   .btn-login {
     background-color: #007bff;
     color: white;
@@ -41,7 +41,7 @@
     background-color: #5a6368;
   }
   
-  /* Optional: smaller icons */
+
   mat-icon {
     font-size: 20px;
   }
